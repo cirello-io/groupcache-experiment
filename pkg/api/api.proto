@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package api;
+
+service Cache {
+    rpc Get(GetRequest) returns (GetResponse) {}
+    rpc Store(StoreRequest) returns (StoreResponse) {}
+}
+
+message GetRequest {
+    string key = 1;
+}
+
+message GetResponse {
+    KV kv = 1;
+}
+
+message StoreRequest {
+    KV kv = 1;
+}
+
+message StoreResponse {}
+
+message KV {
+    string key = 1;
+    string value = 2;
+}
