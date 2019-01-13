@@ -1,21 +1,20 @@
-# Groupcache DB Experiment - Revisited 2018
+# Groupcache DB Experiment - Revisited 2019
 This is the second revision of Capotej's [Groupcache DB Experiment](https://github.com/capotej/groupcache-db-experiment).
 
-I decided to replay again his experiment using newer techniques, such the use of vgo, protobuf and error wrapping.
+I decided to replay again his experiment using newer techniques, such the use of go mod, protobuf and error wrapping.
 
 This project simulates a scenario wherein a few frontends running [groupcache](http://github.com/golang/groupcache) are fronting a slow database. See his [blog post](http://capotej.com/blog/2013/07/28/playing-with-groupcache/) about it for more details.
 
 # Getting it running
 The following commands will set up this topology:
-![groupcache topology](https://raw.github.com/capotej/groupcache-db-experiment/master/topology.png)
+![groupcache topology](https://raw.github.com/ucirello/groupcache-experiment/master/topology.png)
 
 ### Build everything
 
 1. ```git clone https://github.com/ucirello/groupcache-experiment.git```
-2. ```go get -u golang.org/x/vgo```
-3. ```vgo build ./cmd/backend```
-4. ```vgo build ./cmd/frontend```
-5. ```vgo build ./cmd/cli```
+3. ```go build ./cmd/backend```
+4. ```go build ./cmd/frontend```
+5. ```go build ./cmd/cli```
 
 ### Start DB server
 
