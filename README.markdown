@@ -7,11 +7,11 @@ This project simulates a scenario wherein a few frontends running [groupcache](h
 
 # Getting it running
 The following commands will set up this topology:
-![groupcache topology](https://raw.github.com/ucirello/groupcache-experiment/master/topology.png)
+![groupcache topology](https://raw.github.com/cirello-io/groupcache-experiment/master/topology.png)
 
 ### Build everything
 
-1. ```git clone https://github.com/ucirello/groupcache-experiment.git```
+1. ```git clone https://github.com/cirello-io/groupcache-experiment.git```
 3. ```go build ./cmd/backend```
 4. ```go build ./cmd/frontend```
 5. ```go build ./cmd/cli```

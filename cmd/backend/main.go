@@ -8,8 +8,8 @@ import (
 	"log"
 	"net"
 
-	"github.com/ucirello/groupcache-experiment/pkg/backend"
-	"github.com/ucirello/groupcache-experiment/pkg/storage"
+	"github.com/cirello-io/groupcache-experiment/pkg/backend"
+	"github.com/cirello-io/groupcache-experiment/pkg/storage"
 	"google.golang.org/grpc"
 )
 

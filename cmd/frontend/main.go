@@ -11,9 +11,9 @@ import (
 	"net/http"
 	"strings"
 
+	"github.com/cirello-io/groupcache-experiment/pkg/client"
+	"github.com/cirello-io/groupcache-experiment/pkg/frontend"
 	"github.com/golang/groupcache"
-	"github.com/ucirello/groupcache-experiment/pkg/client"
-	"github.com/ucirello/groupcache-experiment/pkg/frontend"
 	"google.golang.org/grpc"
 )
 

@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/ucirello/groupcache-experiment/pkg/client"
+	"github.com/cirello-io/groupcache-experiment/pkg/client"
 )
 
 var (

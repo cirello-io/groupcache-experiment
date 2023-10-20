@@ -4,8 +4,8 @@ package backend
 import (
 	"context"
 
-	"github.com/ucirello/groupcache-experiment/pkg/api"
-	"github.com/ucirello/groupcache-experiment/pkg/storage"
+	"github.com/cirello-io/groupcache-experiment/pkg/api"
+	"github.com/cirello-io/groupcache-experiment/pkg/storage"
 	"google.golang.org/grpc"
 )
 

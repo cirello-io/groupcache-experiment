@@ -4,10 +4,10 @@ package client
 
 import (
 	"context"
+	"fmt"
 	"log"
 
-	"cirello.io/errors"
-	"github.com/ucirello/groupcache-experiment/pkg/api"
+	"github.com/cirello-io/groupcache-experiment/pkg/api"
 	"google.golang.org/grpc"
 )
 
@@ -32,7 +32,7 @@ func (c *Client) Get(key string) (string, error) {
 	req := &api.GetRequest{Key: key}
 	resp, err := c.api.Get(context.Background(), req)
 	if err != nil {
-		return "", errors.E(err, "cannot get key-value pair")
+		return "", fmt.Errorf("cannot get key-value pair: %w", err)
 	}
 	return resp.Kv.Value, nil
 }
@@ -44,5 +44,8 @@ func (c *Client) Set(key string, value string) error {
 		Value: value,
 	}}
 	_, err := c.api.Store(context.Background(), req)
-	return errors.E(err, "cannot store key-value pair")
+	if err != nil {
+		return fmt.Errorf("cannot store key-value pair: %w", err)
+	}
+	return nil
 }

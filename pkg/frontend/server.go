@@ -4,10 +4,10 @@ package frontend
 
 import (
 	"context"
+	"errors"
 
-	"cirello.io/errors"
+	"github.com/cirello-io/groupcache-experiment/pkg/api"
 	"github.com/golang/groupcache"
-	"github.com/ucirello/groupcache-experiment/pkg/api"
 	"google.golang.org/grpc"
 )
 
@@ -43,5 +43,5 @@ func (s *Server) Get(_ context.Context, req *api.GetRequest) (*api.GetResponse, 
 
 // Store saves a key-pair value in the storage.
 func (s *Server) Store(_ context.Context, req *api.StoreRequest) (*api.StoreResponse, error) {
-	return nil, errors.E(errors.Invalid, "not supported")
+	return nil, errors.New("not supported")
 }
