@@ -26,10 +26,10 @@ func New(cacheGroup *groupcache.Group, srv *grpc.Server) *Server {
 }
 
 // Get reads a key-pair value from the storage.
-func (s *Server) Get(_ context.Context, req *api.GetRequest) (*api.GetResponse, error) {
+func (s *Server) Get(ctx context.Context, req *api.GetRequest) (*api.GetResponse, error) {
 	var data []byte
 	err := s.cacheGroup.Get(
-		nil,
+		ctx,
 		req.Key,
 		groupcache.AllocatingByteSliceSink(&data),
 	)
