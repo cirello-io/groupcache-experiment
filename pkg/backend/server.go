@@ -12,6 +12,8 @@ import (
 // Server operates the storage.
 type Server struct {
 	storage *storage.Storage
+
+	api.UnimplementedCacheServer
 }
 
 // New creates a new server and registers it to the GRPC server.

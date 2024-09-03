@@ -14,6 +14,8 @@ import (
 // Server implements the public facing part of the system.
 type Server struct {
 	cacheGroup *groupcache.Group
+
+	api.UnimplementedCacheServer
 }
 
 // New creates a new server and registers it to the GRPC server.

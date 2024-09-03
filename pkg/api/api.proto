@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package api;
 
+option go_package="cirello.io/groupcache-experiment/pkg/api";
+
 service Cache {
     rpc Get(GetRequest) returns (GetResponse) {}
     rpc Store(StoreRequest) returns (StoreResponse) {}
